@@ -9,7 +9,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.27",
     "typescript": "^5.2.2",
     "vite": "^5.1.6"
+  },
+  "dependencies": {
+    "@arcgis/core": "^4.29.7",
+    "@arcgis/map-components": "^4.29.9"
   }
 }

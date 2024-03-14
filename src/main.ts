@@ -1,24 +1,14 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import { defineCustomElements as defineMapElements } from "@arcgis/map-components/dist/loader";
+
+defineMapElements();
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
+  <div style="height: 500px; width:500px">
+    <h1>Zero to Hero</h1>
+    <arcgis-map item-id="e691172598f04ea8881cd2a4adaa45ba" zoom="4">
+      <arcgis-layer-list position="top-right" />
+    </arcgis-map>
   </div>
 `
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
